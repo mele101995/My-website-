@@ -3,92 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>የቪዲዮ ኤዲቲንግ እና ዲጂታል ፈጠራ</title>
+    <title>Sami Creative Studio - ፖርትፎሊዮ</title>
     <style>
-        /* 🎨 CSS - የዌብሳይቱ ውበት እና ቀለም */
+        /* 🎨 የዌብሳይቱ ዋና ውበት እና ከለር (Dark Luxury Theme) */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #0f172a; /* ጥቁር ሰማያዊ ዳራ */
+            background-color: #0b0f19; /* ጥቁርና ዘመናዊ ዳራ */
             color: #ffffff;
             text-align: center;
         }
 
         header {
-            background: linear-gradient(135deg, #1e1b4b, #311042);
-            padding: 50px 20px;
-            border-bottom: 3px solid #8b5cf6;
+            background: linear-gradient(135deg, #111827, #1f2937);
+            padding: 60px 20px;
+            border-bottom: 4px solid #deff9a; /* በረቅ ያለ አረንጓዴ መስመር */
         }
 
         h1 {
             margin: 0;
-            font-size: 2.5rem;
-            color: #a78bfa;
+            font-size: 2.8rem;
+            color: #ffffff;
+        }
+
+        h1 span {
+            color: #deff9a; /* ስምህን ለይቶ የሚያሳይ ከለር */
         }
 
         p.subtitle {
             font-size: 1.2rem;
-            color: #cbd5e1;
+            color: #9ca3af;
             margin-top: 10px;
         }
 
         .container {
-            max-width: 600px;
-            margin: 30px auto;
-            padding: 20px;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
 
-        .about-section {
-            background-color: #1e293b;
-            padding: 20px;
+        /* 💼 የቪዲዮ አገልግሎቶች ሳጥን */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        @media (max-width: 600px) {
+            .services-grid { grid-template-columns: 1fr; }
+        }
+
+        .service-card {
+            background-color: #111827;
+            padding: 25px;
             border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            margin-bottom: 30px;
+            border: 1px solid #1f2937;
+            border-top: 4px solid #deff9a;
+            text-align: left;
         }
 
-        /* 🔗 የሊንክ ቁልፎች ስታይል */
+        .service-card h3 {
+            margin-top: 0;
+            color: #deff9a;
+        }
+
+        /* 🎬 የቪዲዮ ማስቀመጫ ቦታ (Placeholder) */
+        .video-section {
+            background-color: #111827;
+            padding: 30px;
+            border-radius: 16px;
+            margin: 40px 0;
+            border: 1px dashed #374151;
+        }
+
+        .video-box {
+            background-color: #000000;
+            width: 100%;
+            height: 350px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            margin-top: 20px;
+        }
+
+        /* 🔗 የማህበራዊ ሚዲያ ቁልፎች */
+        .links-title {
+            font-size: 1.5rem;
+            margin-top: 40px;
+            color: #ffffff;
+        }
+
         .btn-link {
             display: block;
-            background: linear-gradient(90deg, #6366f1, #a855f7);
+            background: #111827;
             color: white;
             text-decoration: none;
-            padding: 15px;
+            padding: 18px;
             margin: 15px 0;
-            border-radius: 8px;
+            border-radius: 10px;
             font-size: 1.1rem;
             font-weight: bold;
-            transition: transform 0.2s;
+            border: 1px solid #374151;
+            transition: all 0.3s ease;
         }
 
         .btn-link:hover {
-            transform: scale(1.03);
-            background: linear-gradient(90deg, #a855f7, #6366f1);
+            background: #deff9a;
+            color: #000000;
+            transform: translateY(-3px);
         }
 
         footer {
-            margin-top: 50px;
-            padding: 20px;
+            margin-top: 60px;
+            padding: 30px;
             font-size: 0.9rem;
-            color: #64748b;
+            color: #4b5563;
+            border-top: 1px solid #1f2937;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>እንኳን በደህና መጡ!</h1>
-        <p class="subtitle">የቪዲዮ ኤዲቲንግ እና የዲጂታል ይዘት ፈጠራ ማዕከል</p>
+        <h1>Sami <span>Creative</span> Studio</h1>
+        <p class="subtitle">ፕሮፌሽናል የቪዲዮ ኤዲቲንግ እና የዲጂታል ይዘት ፈጠራ ማዕከል</p>
     </header>
 
     <div class="container">
         
-        <div class="about-section">
-            <h2>ስለ እኔ በአጭሩ</h2>
-            <p>እኔ ፕሮፌሽናል የቪዲዮ ኤዲተር እና የይዘት ፈጣሪ ነኝ። ማራኪ የሆኑ አጫጭር (Shorts) እና ረዣዥም ቪዲዮዎችን ጥራታቸውን ጠብቀው እንዲሰሩ አደርጋለሁ። ከታች ያሉትን ሊንኮች በመጫን ስራዎቼን መመልከት ይችላሉ!</p>
+        <div style="background-color: #111827; padding: 25px; border-radius: 12px; text-align: left; margin-bottom: 40px;">
+            <h2 style="margin-top:0; color: #deff9a;">ስለ ስቱዲዮአችን በአጭሩ</h2>
+            <p style="line-height: 1.6; color: #d1d5db;">እኛ ተመልካችን የሚስቡ፣ ስሜት ቀስቃሽ (Motivational) እና ከፍተኛ ጥራት ያላቸውን አጫጭር (Shorts) እና ረዣዥም ቪዲዮዎችን እንሰራለን። ስራዎቻችን በቪዲዮ ሳይኮሎጂ እና ልዩ የትኩረት መግቢያዎች (Hooks) ላይ የተመሰረቱ ናቸው።</p>
         </div>
 
-        <h3>የእኔ ማህበራዊ ሚዲያዎች</h3>
+        <h2 class="links-title" style="text-align: left;">የምንሰጣቸው አገልግሎቶች</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>📱 Viral Shorts & Reels</h3>
+                <p style="color: #9ca3af; font-size: 0.95rem;">የሰዎችን ትኩረት ወዲያውኑ የሚስቡ፣ ፈጣን እና ማራኪ የሆኑ አጫጭር ቪዲዮዎች ኤዲቲንግ።</p>
+            </div>
+            <div class="service-card">
+                <h3>🎨 Cinematic Grading</h3>
+                <p style="color: #9ca3af; font-size: 0.95rem;">ለቪዲዮዎች ልዩ ስሜት እና ውበት የሚሰጥ ፕሮፌሽናል የጥራት እና የቀለም ማስተካከያ (Color Grading)።</p>
+            </div>
+        </div>
+
+        <div class="video-section">
+            <h2>የመጨረሻ ስራዎቼ (Featured Video)</h2>
+            <p style="color: #9ca3af;">ቀጣዩን የዩቲዩብ ቪዲዮህን እዚህ ቦታ ላይ በጋራ እናስገባዋለን!</p>
+            <div class="video-box">
+                <span>[የቪዲዮ ማጫወቻ ቦታ]</span>
+            </div>
+        </div>
+
+        <h2 class="links-title">ከእኔ ጋር ለመስራት</h2>
         
         <a href="https://www.youtube.com/@SamiG_19" target="_blank" class="btn-link">🔴 የዩቲዩብ ቻናሌን ሰብስክራይብ ያድርጉ</a>
         
@@ -99,8 +171,8 @@
     </div>
 
     <footer>
-        <p>© 2026 መብቱ በህግ የተጠበቀ ነው።</p>
+        <p>© 2026 Sami Creative Studio. መብቱ በህግ የተጠበቀ ነው።</p>
     </footer>
 
 </body>
-</html>
+</html
