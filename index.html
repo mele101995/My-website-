@@ -3,128 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sami Creative Studio - Professional Portfolio</title>
+    <title>Sami Creative Studio - Pro Cinematic Portfolio</title>
     <style>
-        /* 🎨 የዌብሳይቱ ዋና ውበት እና ከለር (Premium Dark Theme) */
+        /* 🎨 True Studio Cyberpunk & Cinematic Theme */
         * {
             box-sizing: border-box;
-            scroll-behavior: smooth; /* ገጹ ሲንቀሳቀስ ቀስ ብሎ እንዲሄድ */
+            scroll-behavior: smooth;
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #070a13; /* ይበልጥ ጥልቅ የሆነ የቅንጦት ጥቁር ዳራ */
-            color: #ffffff;
+            background-color: #050508; /* የሲኒማ ጨለማ ክፍል ከለር */
+            color: #e2e8f0;
             text-align: center;
         }
 
-        /* 🔝 ፕሮፌሽናል ሜኑ ባር (Navigation Bar) */
+        /* 🔝 የቪአይፒ ብዥታ ሜኑ ባር */
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: rgba(11, 15, 25, 0.9);
-            padding: 15px 30px;
+            background-color: rgba(5, 5, 8, 0.85);
+            padding: 18px 30px;
             position: sticky;
             top: 0;
             z-index: 1000;
-            backdrop-filter: blur(10px); /* ከበስተጀርባው ያለውን ኮድ ብዥ የሚያደርግ ቪአይፒ ስታይል */
-            border-bottom: 1px solid #1f2937;
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.2);
         }
 
         .logo {
-            font-size: 1.4rem;
-            font-weight: bold;
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
             color: #ffffff;
+            text-transform: uppercase;
         }
 
         .logo span {
-            color: #deff9a;
+            color: #8b5cf6; /* የቪዲዮ ስቱዲዮ ወይንጠጅ ከለር */
+            text-shadow: 0 0 10px #8b5cf6;
         }
 
-        /* ☰ የሜኑ ቁልፍ (Hamburger Icon) */
         .menu-icon {
             font-size: 1.8rem;
-            color: #deff9a;
+            color: #06b6d4; /* የኒዮን ሰማያዊ ከለር */
             cursor: pointer;
-            transition: transform 0.2s;
+            text-shadow: 0 0 8px #06b6d4;
+            transition: 0.3s;
         }
 
-        .menu-icon:hover {
-            transform: scale(1.1);
-        }
-
-        /* 📱 ተንቀሳቃሽ የሜኑ ዝርዝር (Drop-down Menu Overlay) */
         .menu-overlay {
             display: none;
             position: fixed;
-            top: 70px;
+            top: 73px;
             left: 0;
             width: 100%;
-            background-color: rgba(11, 15, 25, 0.98);
-            border-bottom: 2px solid #deff9a;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            background-color: rgba(5, 5, 8, 0.98);
+            border-bottom: 2px solid #8b5cf6;
             z-index: 999;
-            padding: 20px 0;
+            padding: 15px 0;
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.15);
         }
 
         .menu-overlay a {
             display: block;
-            color: white;
+            color: #cbd5e1;
             text-decoration: none;
-            padding: 15px;
-            font-size: 1.2rem;
-            font-weight: 500;
+            padding: 14px;
+            font-size: 1.15rem;
+            font-weight: 600;
             transition: all 0.3s;
         }
 
         .menu-overlay a:hover {
-            background-color: #deff9a;
-            color: #000000;
+            background-color: #8b5cf6;
+            color: #ffffff;
+            text-shadow: 0 0 10px #ffffff;
         }
 
+        /* 🎬 አስደናቂ የስቱዲዮ መግቢያ (Hero Section) */
         header {
-            background: linear-gradient(135deg, #0b0f19, #1f2937);
-            padding: 80px 20px;
-            border-bottom: 4px solid #deff9a;
+            background: radial-gradient(circle at center, #1e1035 0%, #050508 100%);
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px; /* የስቱዲዮ ግሪድ ዲዛይን */
         }
 
         h1 {
             margin: 0;
-            font-size: 3rem;
+            font-size: 3.2rem;
+            font-weight: 800;
             color: #ffffff;
-            letter-spacing: 1px;
+            text-shadow: 0 0 20px rgba(255,255,255,0.1);
+        }
+
+        h1 span {
+            background: linear-gradient(to right, #8b5cf6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         p.subtitle {
-            font-size: 1.3rem;
-            color: #9ca3af;
-            margin-top: 15px;
+            font-size: 1.25rem;
+            color: #94a3b8;
+            margin-top: 20px;
+            letter-spacing: 1px;
         }
 
         .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
 
         .section-title {
-            font-size: 1.8rem;
-            margin-top: 50px;
-            margin-bottom: 20px;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-top: 60px;
+            margin-bottom: 25px;
             text-align: left;
-            border-left: 4px solid #deff9a;
-            padding-left: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             color: #ffffff;
+            border-left: 4px solid #06b6d4;
+            padding-left: 15px;
         }
 
-        /* 💼 የአገልግሎቶች ሳጥን */
+        /* 💼 እውነተኛ የስቱዲዮ ካርዶች (Neon Glow Cards) */
         .services-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 25px;
             margin: 20px 0;
         }
 
@@ -133,63 +155,87 @@
         }
 
         .service-card {
-            background-color: #111827;
-            padding: 30px;
+            background: #0d0d15;
+            padding: 35px 25px;
             border-radius: 16px;
-            border: 1px solid #1f2937;
-            border-top: 4px solid #deff9a;
+            border: 1px solid rgba(255, 255, 255, 0.05);
             text-align: left;
-            transition: transform 0.3s;
+            position: relative;
+            transition: all 0.4s ease;
         }
 
         .service-card:hover {
             transform: translateY(-5px);
+            border-color: #8b5cf6;
+            box-shadow: 0 10px 25px rgba(139, 92, 246, 0.2);
         }
 
         .service-card h3 {
             margin-top: 0;
-            color: #deff9a;
-            font-size: 1.3rem;
+            color: #06b6d4;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
         }
 
-        /* 🎬 የቪዲዮ ማሳያ ቦታ */
+        /* 🎬 የፊልም እውነተኛ ማጫወቻ ቦክስ */
         .video-section {
-            background-color: #111827;
-            padding: 40px 20px;
-            border-radius: 20px;
-            margin: 40px 0;
-            border: 1px solid #1f2937;
+            background: #0d0d15;
+            padding: 45px 20px;
+            border-radius: 24px;
+            margin: 50px 0;
+            border: 1px solid rgba(139, 92, 246, 0.15);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
         }
 
-        /* 🔗 የማህበራዊ ሚዲያ ቁልፎች */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 177.77%; /* 9:16 Shorts Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 320px;
+            margin: 0 auto;
+            border-radius: 20px;
+            border: 3px solid #1e1b4b;
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            border: none;
+        }
+
+        /* 🔗 የኒዮን ቁልፎች (Glow On Hover Buttons) */
         .btn-link {
-            display: block;
-            background: #111827;
-            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #09090f;
+            color: #ffffff;
             text-decoration: none;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 12px;
-            font-size: 1.15rem;
-            font-weight: bold;
-            border: 1px solid #374151;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            padding: 22px;
+            margin: 20px 0;
+            border-radius: 14px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s ease;
         }
 
         .btn-link:hover {
-            background: #deff9a;
-            color: #000000;
+            background: linear-gradient(90deg, #8b5cf6, #06b6d4);
+            border-color: transparent;
             transform: scale(1.02);
+            box-shadow: 0 0 25px rgba(6, 182, 212, 0.4);
         }
 
         footer {
-            margin-top: 80px;
+            margin-top: 100px;
             padding: 40px;
-            font-size: 0.95rem;
-            color: #4b5563;
-            border-top: 1px solid #1f2937;
-            background-color: #0b0f19;
+            font-size: 0.9rem;
+            color: #475569;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            background: #020205;
         }
     </style>
 </head>
@@ -197,64 +243,64 @@
 
     <div class="navbar">
         <div class="logo">Sami<span>Studio</span></div>
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="menu-icon" onclick="toggleMenu()">🎬</div>
     </div>
 
     <div class="menu-overlay" id="navMenu">
-        <a href="#" onclick="toggleMenu()">🏠 ዋና ገጽ (Home)</a>
-        <a href="#services" onclick="toggleMenu()">🛠️ አገልግሎቶች (Services)</a>
-        <a href="#videos" onclick="toggleMenu()">🎬 የቪዲዮ ስራዎች (Portfolio)</a>
-        <a href="#contact" onclick="toggleMenu()">📞 አግኙኝ (Contact)</a>
+        <a href="#" onclick="toggleMenu()">⚡ HOME</a>
+        <a href="#services" onclick="toggleMenu()">🛠️ SERVICES</a>
+        <a href="#videos" onclick="toggleMenu()">🎬 PORTFOLIO</a>
+        <a href="#contact" onclick="toggleMenu()">📞 CONTACT</a>
     </div>
 
     <header>
-        <h1>Sami <span>Creative</span> Studio</h1>
-        <p class="subtitle">ፕሮፌሽናል የቪዲዮ ኤዲቲንግ እና የዲጂታል ይዘት ፈጠራ ማዕከል</p>
+        <h1>SAMI <span>CREATIVE</span> STUDIO</h1>
+        <p class="subtitle">PREMIUM VIDEO EDITING & DIGITAL ARTISTRY</p>
     </header>
 
     <div class="container">
         
-        <div style="background-color: #111827; padding: 30px; border-radius: 16px; text-align: left; margin-bottom: 40px; border: 1px solid #1f2937;">
-            <h2 style="margin-top:0; color: #deff9a;">ስለ ስቱዲዮአችን በአጭሩ</h2>
-            <p style="line-height: 1.7; color: #d1d5db; font-size: 1.1rem; margin: 0;">እኛ ተመልካችን የሚስቡ፣ ስሜት ቀስቃሽ (Motivational) እና ከፍተኛ ጥራት ያላቸውን አጫጭር (Shorts) እና ረዣዥም ቪዲዮዎችን እንሰራለን። ስራዎቻችን በቪዲዮ ሳይኮሎጂ እና ልዩ የትኩረት መግቢያዎች (Hooks) ላይ የተመሰረቱ ናቸው።</p>
+        <div style="background: #0d0d15; padding: 35px; border-radius: 16px; text-align: left; margin-bottom: 50px; border: 1px solid rgba(255,255,255,0.03);">
+            <h2 style="margin-top:0; color: #8b5cf6; font-size: 1.5rem;">ABOUT THE STUDIO</h2>
+            <p style="line-height: 1.8; color: #94a3b8; font-size: 1.1rem; margin: 0;">እኛ በቪዲዮ ሳይኮሎጂ እና ልዩ የትኩረት መግቢያዎች (High-Retention Hooks) ላይ በመመስረት፣ የተመልካችን ቀልብ የሚስቡ ስሜት ቀስቃሽ (Motivational) እና ሲኒማቲክ ይዘቶችን በጥራት እናቀናብራለን።</p>
         </div>
 
         <div id="services">
-            <h2 class="section-title">የምንሰጣቸው አገልግሎቶች</h2>
+            <h2 class="section-title">STUDIO SERVICES</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>📱 Viral Shorts & Reels</h3>
-                    <p style="color: #9ca3af; font-size: 0.95rem; line-height: 1.5; margin: 0;">የሰዎችን ትኩረት ወዲያውኑ የሚስቡ፣ ፈጣን እና ማራኪ የሆኑ አጫጭር ቪዲዮዎች ኤዲቲንግ።</p>
+                    <h3>📱 VIRAL SHORTS</h3>
+                    <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6; margin: 0;">ለTikTok፣ Reels እና YouTube Shorts የሚሆኑ ፈጣን፣ ስሜት ቀስቃሽ እና ተፅዕኖ ፈጣሪ ኤዲቲንግ።</p>
                 </div>
                 <div class="service-card">
-                    <h3>🎨 Cinematic Grading</h3>
-                    <p style="color: #9ca3af; font-size: 0.95rem; line-height: 1.5; margin: 0;">ለቪዲዮዎች ልዩ ስሜት እና ውበት የሚሰጥ ፕሮፌሽናል የጥራት እና የቀለም ማስተካከያ (Color Grading)።</p>
+                    <h3>🎨 CINEMATIC GRADING</h3>
+                    <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6; margin: 0;">ለቪዲዮዎች ልዩ የሆሊውድ ስታይል ስሜት የሚሰጥ የጥራት እና የከለር ማስተካከያ (Color Grading)።</p>
                 </div>
             </div>
         </div>
 
         <div id="videos" class="video-section">
-            <h2 style="margin-top: 0; font-size: 1.6rem;">የመጨረሻ ስራዎቼ (Featured Video)</h2>
-            <p style="color: #9ca3af; margin-bottom: 25px;">የእኔን አጫጭር የቪዲዮ ስራዎች ከታች መመልከት ይችላሉ!</p>
-            <div style="position: relative; padding-bottom: 177.77%; height: 0; overflow: hidden; max-width: 330px; margin: 0 auto; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.6); border: 2px solid #1f2937;">
-                <iframe src="https://www.youtube.com/embed/hmW0XAoHy-U" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h2 style="margin-top: 0; font-size: 1.7rem; letter-spacing: 1px;">LATEST WORK</h2>
+            <p style="color: #64748b; margin-bottom: 30px;">ከታች ያለውን የቪዲዮ ማጫወቻ በመንካት ስራዎቻችንን ይገምግሙ</p>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/hmW0XAoHy-U" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
 
         <div id="contact">
-            <h2 class="section-title">ከእኔ ጋር ለመስራት</h2>
+            <h2 class="section-title">START A PROJECT</h2>
             
-            <a href="https://www.youtube.com/@SamiG_19" target="_blank" class="btn-link">🔴 የዩቲዩብ ቻናሌን ሰብስክራይብ ያድርጉ</a>
+            <a href="https://www.youtube.com/@SamiG_19" target="_blank" class="btn-link">🔴 YOUTUBE CHANNEL</a>
             
-            <a href="tg://resolve?domain=Diamond_180" target="_blank" class="btn-link">✈️ የቴሌግራም ቻናሌን ይቀላቀሉ</a>
+            <a href="tg://resolve?domain=Diamond_180" target="_blank" class="btn-link">✈️ TELEGRAM WORKSPACE</a>
             
-            <a href="mailto:mele101995@gmail.com" class="btn-link">📧 በኢሜይል ለማነጋገር</a>
+            <a href="mailto:mele101995@gmail.com" class="btn-link">📧 EMAIL CONSULTATION</a>
         </div>
 
     </div>
 
     <footer>
-        <p>© 2026 Sami Creative Studio. መብቱ በህግ የተጠበቀ ነው።</p>
+        <p>© 2026 SAMI CREATIVE STUDIO. ALL RIGHTS RESERVED.</p>
     </footer>
 
     <script>
@@ -269,4 +315,4 @@
     </script>
 
 </body>
-    </html>
+</html>
